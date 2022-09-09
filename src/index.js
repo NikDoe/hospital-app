@@ -3,16 +3,14 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { AppDataSource } from './db.js';
+import router from "./router/index.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors());
-
-app.get('/', (req, res) => {
-	res.json({message : "hospital app"})
-});
+app.use('/api', router);
 
 const start = async () => {
 	try {
