@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-	res.send('<h1>hospital app</h1>');
+	res.json({message : "hospital app"})
 });
 
 const start = async () => {
