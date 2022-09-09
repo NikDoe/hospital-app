@@ -15,10 +15,12 @@ export default new EntitySchema({
 		specialization: {
 			type: 'varchar',
 		},
-		sizes: {
+		office: {
+			type : 'int',
+		},
+		receptionTime: {
 			type: 'json',
-			array: true,
-			default: [],
+			array: false,
 		},
 	},
 });
