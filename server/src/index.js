@@ -16,11 +16,11 @@ app.get('/', (req, res) => {
 
 const start = async () => {
 	try {
-		await AppDataSource.initialize()
-			.then(() => {
-				console.log('база данных подключена');
-			})
-			.catch(error => console.log(error));
+		// await AppDataSource.initialize()
+		// 	.then(() => {
+		// 		console.log('база данных подключена');
+		// 	})
+		// 	.catch(error => console.log(error));
 		await app.listen(PORT, () => {
 			console.log(`сервер запущен на порту ${PORT}`);
 		});
