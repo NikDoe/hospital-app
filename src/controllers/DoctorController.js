@@ -13,8 +13,9 @@ class DoctorController {
 
 	async getAllDoctors(req, res) {
 		try {
-			const allDoctors = await doctorRepo.find();
-			return res.json(allDoctors);
+			// const allDoctors = await doctorRepo.find();
+			// return res.json(allDoctors);
+			res.json({message: "all doctors"})
 		} catch (e) {
 			console.log(e);
 		}
